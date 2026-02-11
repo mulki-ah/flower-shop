@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="flowe.css">
+
+<title>Flower Shop </title>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <h1 class="logo">Flower-Shop</h1>
+  <nav>
+    <a onclick="scrollToSection('hero')">Home</a>
+    <a onclick="scrollToSection('products')">Products</a>
+    <a onclick="scrollToSection('booking')">Booking</a>
+    <span class="cart">Cart  🛒:<b id="cartCount">0</b></span>
+  </nav>
+</header>
+
+<!-- HERO Section -->
+ <section id="hero" class="hero">
+  <div class="hero-text">
+    <h2>Fresh Flowers for Every Occasion</h2>
+    <p>Beautiful flowers for every special moment</p>
+    <button onclick="goProducts()">Shop Now</button>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <h2>Our Best Flowers</h2>
+  <div class="product-grid">
+    <div class="card">
+      <img src="flower3.jpeg" alt="">
+      <h3>Gypsophila Rose</h3>
+      <p>$20</p>
+      <button class="add-cart">Add Cart</button>
+    </div>
+    <div class="card">
+      <img src="flowe4.jpeg" alt="">
+      <h3>Red Roses boquet</h3>
+      <p>$50</p>
+      <button class="add-cart">Add Cart</button>
+    </div>
+    <div class="card">
+      <img src="flowe10.jpeg" alt="">
+      <h3>Sunflower</h3>
+      <p>$30</p>
+      <button class="add-cart">Add Cart</button>
+    </div>
+    <div class="card">
+      <img src="flower6.jpeg" alt="">
+      <h3>Buket lilly</h3>
+      <p>$25</p>
+      <button class="add-cart">Add Cart</button>
+    </div>
+
+     <div class="card">
+      <img src="flower2.jpeg" alt="">
+      <h3>Buket lilly</h3>
+      <p>$90</p>
+      <button class="add-cart">Add Cart</button>
+    </div>
+
+     <div class="card">
+      <img src="flower5.jpeg" alt="">
+      <h3>Buket lilly</h3>
+      <p>$25</p>
+      <button class="add-cart">Add Cart</button>
+    </div>
+
+
+     <div class="card">
+      <img src="flower8.jpeg" alt="">
+      <h3>Tulip</h3>
+      <p>$51</p>
+      <button class="add-cart">Add Cart</button>
+    </div>
+
+     <div class="card">
+      <img src="flower9.jpeg" alt="">
+      <h3>Helianthus annus</h3>
+      <p>$45</p>
+      <button class="add-cart">Add Cart</button>
+    </div>
+
+     <div class="card">
+      <img src="flowe12.jpeg" alt="">
+      <h3>Carnation</h3>
+      <p>$49</p>
+      <button class="add-cart">Add Cart</button>
+    </div>
+
+     <div class="card">
+      <img src="flowe15.jpeg" alt="">
+      <h3>lilium</h3>
+      <p>$80</p>
+      <button class="add-cart">Add Cart</button>
+    </div>
+ <div class="card">
+      <img src="flower14.jpeg" alt="">
+      <h3>peony</h3>
+      <p>$50</p>
+      <button class="add-cart">Add Cart</button>
+    </div>
+
+     <div class="card">
+      <img src="flower13.jpeg" alt="">
+      <h3> lilly</h3>
+      <p>$15</p>
+      <button class="add-cart">Add Cart</button>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- CART MODAL -->
+<div id="cartModal">
+  <div class="modal-content">
+    <h2>Your Cart</h2>
+
+    <ul id="cartItems"></ul>
+
+    <button onclick="closeCart()">Close</button>
+  </div>
+</div>
+
+<!-- BOOKING -->
+<section id="booking" class="booking">
+  <form id="bookingForm">
+    <h2>Booking Flowers</h2>
+    <input id="name" type="text" placeholder="Your Name">
+    <input id="phone" type="text" placeholder="Phone Number">
+    <select id="flower">
+      <option value="">Select Flower</option>
+      <option>Gypsophila Rose</option>
+      <option>Red Roses boquet</option>
+      <option>flower boquet</option>
+      <option>Buket lillye</option>
+      <option>Sunflower</option>
+      <option>Tulip</option>
+      <option>Helianthus annus</option>
+      <option>Carnation</option>
+      <option >lilium</option>
+      <option >peony</option>
+      <option>lilly</option>
+    </select>
+    <input id="date" type="date">
+    <button type="submit">Book Now</button>
+    <p id="message"></p>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>All rights reserved Flower Shop</p>
+</footer>
+
+
+
+
+<script src="flower.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+/* ===== Reset ===== */
+* { 
+    margin:0;
+     padding:0;
+      box-sizing:border-box; 
+    }
+
+
+body { 
+    font-family: Arial, sans-serif; 
+    background: #fff0f5; 
+    color: #333; 
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: sticky;
+   top:0;
+   z-index:1000;
+  display:flex;
+   justify-content:space-between; 
+   align-items:center;
+  padding:15px 30px; 
+  background:white; 
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+
+
+}
+.header .logo {
+    
+    color:#ff69b4; 
+    font-size:24px;
+     font-weight:bold; 
+    
+    }
+
+.header nav a { 
+    margin:0 10px; 
+    color:#ff69b4; 
+    text-decoration:none;
+     font-weight:bold; 
+     cursor:pointer; 
+    }
+
+
+.header .cart {
+     color:#ef55a2; 
+    font-weight:bold;
+     cursor:pointer; 
+
+    }
+
+
+
+    .hero {
+  background: url("bg-flowe.jpeg") no-repeat center center / cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* overlay si text u muuqdo */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* text */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.hero-text h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-text button {
+  padding: 12px 25px;
+  background: #ff1493;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+/* PRODUCTS  */
+.products {
+     padding:50px 20px;
+      text-align:center; 
+      opacity:0;
+       transform:translateY(50px); 
+       transition:all 0.5s ease; 
+    }
+
+.products.visible { 
+    opacity:1; 
+    transform:translateY(0);
+ }
+
+.products h2 { 
+    font-size:32px; 
+    margin-bottom:30px; 
+    color:#ff1493;
+ }
+
+.product-grid {
+     display:grid;
+     grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); 
+     gap:20px; 
+
+    }
+.card { 
+    background:#ff69b4;
+     color:white;
+      border-radius:8px;
+       padding:4px; 
+       text-align:center;
+        transition:transform 0.3s;
+    }
+
+.card:hover {
+     transform:scale(1.05);
+ }
+
+.card img { 
+    width:100%; 
+    height:260px;
+     object-fit:cover;
+      border-radius:6px;
+       margin-bottom:10px; 
+    }
+.card button { 
+    padding:8px 20px;
+     background:blue;
+      border:none; 
+      cursor:pointer;
+       color:white; 
+       border-radius:4px; 
+       margin-top:4px; 
+       margin-bottom: 3px;
+    }
+
+      /* BOOKING  */
+.booking {
+     display:flex; 
+     justify-content:center; 
+     padding:80px 40px;
+     }
+
+.booking form { 
+    background:white; 
+    padding:25px; 
+    border-radius:10px; 
+    width:100%;
+     max-width:1000px; 
+    
+    }
+
+.booking h2 { 
+    text-align:center;
+     margin-bottom:15px; 
+     color:#ff1493; 
+    }
+
+.booking input, .booking select, .booking button { 
+    width:100%; 
+    padding:10px;
+     margin:8px 0;
+     }
+
+.booking button { 
+    
+    background:#ff1493; 
+    color:white; 
+    border:none;
+     cursor:pointer;
+      border-radius:6px; 
+    }
+
+#message { 
+    text-align:center; 
+    font-weight:bold;
+     margin-top:10px;
+     }
+
+/* FOOTER  */
+footer {
+     text-align:center; 
+     padding:15px 30px; 
+     background:#ff69b4;
+      color:white;
+       font-size:20px; 
+     }
+
+/*  CART MODAL */
+#cartModal { 
+    display:none;
+     position:fixed; 
+     top:0; 
+     left:0; 
+     width:100%;
+      height:100%; 
+      background:rgba(0,0,0,0.5);
+       justify-content:center;
+        align-items:center;
+         z-index:2000; 
+        }
+
+#cartModal .modal-content {
+     background:white; 
+     padding:20px;
+      border-radius:10px;
+       width:90%;
+        max-width:400px;
+         text-align:center; 
+         position:relative;
+         }
+#cartModal ul { 
+    list-style:none;
+     padding:0; 
+     margin:20px 0; 
+    }
+
+#cartModal ul li { 
+    display:flex;
+     align-items:center; 
+     margin-bottom:10px; 
+     font-weight:bold; 
+    }
+
+#cartModal ul li img {
+     width:60px;
+      height:60px;
+       object-fit:cover; 
+       border-radius:6px; 
+       margin-right:10px;
+     }
+
+#cartModal button { 
+    padding:15px 20px; 
+    background:#ff1493;
+     color:white;
+      border:none;
+       border-radius:6px; 
+       cursor:pointer; }
